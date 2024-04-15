@@ -1,0 +1,35 @@
+﻿<Page x:Class="BSU_ALL_PROJECT_LECTION.split_frame"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BSU_ALL_PROJECT_LECTION"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="split_frame" WindowTitle="two_splitter">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <GridSplitter Grid.Column="1"  Grid.Row="0" ShowsPreview="False" Width="3"
+        HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+        <GridSplitter Grid.Row="1" Grid.ColumnSpan="3" Height="3"
+        HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+        <Canvas Grid.Column="0" Grid.Row="0" Background="AliceBlue">
+            <TextBlock >Левая панель</TextBlock>
+        </Canvas>
+        <Canvas Grid.Column="2" Grid.Row="0" Background="LightGreen">
+            <TextBlock>Правая панель</TextBlock>
+        </Canvas>
+        <Canvas Grid.ColumnSpan="3" Grid.Row="2" Background="#dfffff">
+            <TextBlock Canvas.Left="60">Нижняя панель</TextBlock>
+        </Canvas>
+    </Grid>
+</Page>

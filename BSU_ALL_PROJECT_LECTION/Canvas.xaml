@@ -1,0 +1,22 @@
+﻿<Page x:Class="BSU_ALL_PROJECT_LECTION.Canvas"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BSU_ALL_PROJECT_LECTION"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="450"
+      Title="Canvas">
+
+    <Grid>
+        <Canvas x:Name="canvs" Background="Azure">
+            <Button Background="AliceBlue" Content="Top 20 Left 40" Canvas.Top="20" Canvas.Left="40" />
+            <Button Background="LightSkyBlue" Content="Top 20 Right 20" Canvas.Top="20" Canvas.Right="20"/>
+            <Button Background="Aquamarine" Content="Bottom 30 Left 20" Canvas.Bottom="30" Canvas.Left="20"/>
+            <Button Background="LightCyan" Content="Bottom 20 Right 40" Canvas.Left="20" Canvas.Right="40"/>
+            <Button Content="Кнопка" Width="5cm" Height="0.4in" />
+
+        </Canvas>
+
+    </Grid>
+</Page>
