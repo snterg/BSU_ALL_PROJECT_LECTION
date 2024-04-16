@@ -52,5 +52,34 @@
             <TextBlock Foreground="ForestGreen" Text="Foreground"/>
             <Label Content="Foreground+Background" Foreground="DarkOliveGreen" Background="PaleVioletRed"/>
         </StackPanel>
+        <StackPanel Grid.Column="3" Grid.Row="1" >
+            <Button Content="SolidBrush">
+                <Button.Background>
+                    <SolidColorBrush Color="Bisque"></SolidColorBrush>
+                </Button.Background>
+            </Button>
+            <Button Content="LinearGradientBrush" Foreground="Wheat">
+                <Button.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="Red" Offset="1"/>
+                        <GradientStop Color="Green" Offset="0.3"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Column="4" Grid.Row="1" >
+            <Button x:Name="btn" Content="ContentFromCode"/>
+            <Button x:Name="btn_1" Content="ButtonFromCode" Click="btn_1_Click"/>
+            <Button x:Name="brnimage" Click="brnimage_Click">
+                <StackPanel>
+                    <TextBlock Text="BSU" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Image Source="images.jpg" Width="40"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="2" >
+            <Button Content="IsDefault" Name="IsDefault" IsDefault="True" Click="Button_Click"/>
+            <Button Content="IsCancel" x:Name="IsCancel" IsCancel="True" Click="Button_Click_1"/>
+        </StackPanel>
     </Grid>
 </Window>
