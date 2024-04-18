@@ -73,6 +73,9 @@
     <Compile Include="StackPanel.xaml.cs">
       <DependentUpon>StackPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Styles_triggers_temes.xaml.cs">
+      <DependentUpon>Styles_triggers_temes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ungrid.xaml.cs">
       <DependentUpon>ungrid.xaml</DependentUpon>
     </Compile>
@@ -123,6 +126,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="StackPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles_triggers_temes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
