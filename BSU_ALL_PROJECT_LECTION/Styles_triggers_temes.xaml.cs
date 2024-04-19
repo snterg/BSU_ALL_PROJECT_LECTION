@@ -59,5 +59,24 @@ namespace BSU_ALL_PROJECT_LECTION
             MessageBox.Show("Клик, Клик!");
 
         }
+
+        private void themebox_Initialized(object sender, EventArgs e)
+        {
+            List<string> styles = new List<string> { "light", "dark" };
+            themebox.ItemsSource = styles;
+        }
+
+        private void themebox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string style = themebox.SelectedItem as string;
+            // определяем путь к файлу ресурсов
+            var uri = new Uri(style + ".xaml", UriKind.Relative);
+            // загружаем словарь ресурсов
+            ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+            // очищаем коллекцию ресурсов приложения
+            Application.Current.Resources.Clear();
+            // добавляем загруженный словарь ресурсов
+            Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+        }
     }
 }

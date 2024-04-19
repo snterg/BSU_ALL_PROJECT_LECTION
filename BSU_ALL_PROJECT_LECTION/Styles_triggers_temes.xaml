@@ -9,13 +9,26 @@
 
     <Window.Resources>
 
-        <Style TargetType="Button">
+        <!--<Style TargetType="Button">
             <Setter Property="FontFamily" Value="Tahoma" />
             <Setter Property="Background" Value="Green" />
             <Setter Property="Foreground" Value="Red" />
             <Setter Property="Margin" Value="5" />
             <EventSetter Event="Button.Click" Handler="Button_Click" />
-        </Style>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsMouseOver" Value="True" />
+                        <Condition Property="IsPressed" Value="True" />
+                    </MultiTrigger.Conditions>
+                    <MultiTrigger.Setters>
+                        <Setter Property="FontSize" Value="14" />
+                        <Setter Property="Foreground" Value="Blue" />
+                    </MultiTrigger.Setters>
+                </MultiTrigger>
+            </Style.Triggers>
+
+        </Style>-->
 
         <FontFamily x:Key="buttonFont">Verdana</FontFamily>
         <SolidColorBrush Color="White" x:Key="buttonFontColor" />
@@ -58,6 +71,39 @@
             <Setter Property="Button.FontFamily" Value="Verdana" />
         </Style>
 
+        <Style x:Key="Triggers">
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="true">
+                    <Setter Property="Control.FontSize" Value="14"/>
+                    <Setter Property="Control.Foreground" Value="Red"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="Button">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Click">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetProperty="Background.Color" Duration="0:0:5" To="Green" AutoReverse="True" />
+                                <ColorAnimation Storyboard.TargetProperty="Foreground.Color" Duration="0:0:5" To="PaleVioletRed" AutoReverse="True" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="DataTrigger">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=box, Path=IsChecked}" Value="True">
+                    <Setter Property="Button.IsEnabled" Value="False"/>
+                </DataTrigger>
+            </Style.Triggers>
+
+        </Style>
+
     </Window.Resources>
 
     <Grid>
@@ -98,5 +144,20 @@
             <Button x:Name="button13" Content="Кнопка 3"  Click="button13_Click" />
         </StackPanel>
 
+        <StackPanel x:Name="buttonsStack_5" Background="Black" Grid.Column="1" Grid.Row="1" >
+            <Button x:Name="button14" Content="Кнопка 1" Style="{StaticResource ResourceKey=Triggers}"  />
+            <Button x:Name="button15" Content="Кнопка 2"  />
+            <Button x:Name="button16" Background="Turquoise"  Content="Кнопка 3"  />
+        </StackPanel>
+
+        <StackPanel x:Name="buttonsStack_6" Background="Black" Grid.Column="2" Grid.Row="1" >
+            <CheckBox x:Name="box" Content="DataTrigger" Foreground="Wheat" FontSize="16" />
+            <Button x:Name="button17" Content="Кнопка 1" Style="{StaticResource DataTrigger}"/>
+        </StackPanel>
+        <StackPanel x:Name="themes" Background="Black" Grid.Column="0" Grid.Row="2" >
+            <Label Content="Выберите тему:" Foreground="White"/>
+            <ComboBox x:Name="themebox" Initialized="themebox_Initialized" SelectionChanged="themebox_SelectionChanged"/>
+            <TextBlock Text="Привет БГУ!" Style="{DynamicResource ResourceKey=TextBlockStyle}"/>
+        </StackPanel>
     </Grid>
 </Window>

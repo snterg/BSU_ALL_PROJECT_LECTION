@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Binding.xaml.cs">
+      <DependentUpon>Binding.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Canvas.xaml.cs">
       <DependentUpon>Canvas.xaml</DependentUpon>
     </Compile>
@@ -66,6 +69,9 @@
     </Compile>
     <Compile Include="gridsplit.xaml.cs">
       <DependentUpon>gridsplit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.xaml.cs">
+      <DependentUpon>Resources.xaml</DependentUpon>
     </Compile>
     <Compile Include="split_frame.xaml.cs">
       <DependentUpon>split_frame.xaml</DependentUpon>
@@ -82,11 +88,23 @@
     <Compile Include="WrapPanel.xaml.cs">
       <DependentUpon>WrapPanel.xaml</DependentUpon>
     </Compile>
+    <Page Include="Binding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Canvas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls_Base.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="dark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dictionary1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -99,6 +117,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="gridsplit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="light.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -118,6 +140,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
