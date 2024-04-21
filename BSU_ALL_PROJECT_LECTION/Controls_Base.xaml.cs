@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,6 +26,7 @@ namespace BSU_ALL_PROJECT_LECTION
     {
         Button btncode;
         int i = 0;
+        int count_explanded=0, count_collapsed=0;
         public Controls_Base()
         {
             InitializeComponent();
@@ -116,6 +118,69 @@ namespace BSU_ALL_PROJECT_LECTION
         private void CheckBox_Indeterminate(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Эксклюзив для флага 3");
+        }
+
+        private void RadioButton_Click(object sender, RoutedEventArgs e)
+        {
+            var content = sender as RadioButton;
+
+            MessageBox.Show("Элемент относится к группе " + content.GroupName);
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            var content = sender as RadioButton;
+          
+            if(content.IsChecked==true)
+            {
+                MessageBox.Show("Элемент " + content.Content + " отмечен!");
+            }
+        }
+
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
+            var content = sender as RadioButton;
+
+            if (content.IsChecked == true)
+            {
+                MessageBox.Show("Элемент " + content.Content + " из группы "+ content.GroupName + " отмечен!");
+            }          
+        }
+
+        private void Button_MouseEnter(object sender, MouseEventArgs e)
+        {
+            popup.IsOpen = true;
+
+        }
+
+        private void Button_MouseLeave(object sender, MouseEventArgs e)
+        {
+            popup.IsOpen = false;
+        }
+
+        private void Expander_Expanded(object sender, RoutedEventArgs e)
+        {
+            count_explanded++;
+            var content = sender as Expander;
+            System.Windows.Controls.StackPanel stack = (System.Windows.Controls.StackPanel)content.Content;
+            stack.Children.Add(new CheckBox() { Content = "Explanded " + Convert.ToString(count_explanded) });
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            scroll.LineDown();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            scroll.LineUp();
+        }
+
+        private void Expander_Collapsed(object sender, RoutedEventArgs e)
+        {
+            count_collapsed++;
+            MessageBox.Show("Collapsed:" + Convert.ToString(count_collapsed));
+            
         }
     }
 }

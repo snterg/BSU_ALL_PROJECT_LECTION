@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BSU_ALL_PROJECT_LECTION"
         mc:Ignorable="d"
-        Title="Controls_Base" Height="450" Width="800">
+        Title="Controls_Base" Height="600" Width="800">
     <Grid ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -92,5 +92,98 @@
             <CheckBox IsThreeState="True" IsChecked="True" Content="Отмечено" Click="CheckBox_Click" Checked="CheckBox_Checked"/>
             <CheckBox IsThreeState="True" IsChecked="{x:Null}" Content="Неопределено" Click="CheckBox_Click" Indeterminate="CheckBox_Indeterminate"/>
         </StackPanel>
+        <StackPanel Grid.Column="3" Grid.Row="2" >
+            <RadioButton GroupName="Lang" Content="C#" Click="RadioButton_Click" Checked="RadioButton_Checked">
+                <RadioButton.ToolTip>
+                    <ToolTip Foreground="DarkSeaGreen" Background="MediumVioletRed">
+                    Это Языки программирования
+                    </ToolTip>
+                </RadioButton.ToolTip>
+            </RadioButton>
+            <RadioButton GroupName="Lang" Click="RadioButton_Click" Checked="RadioButton_Checked">
+                <RadioButton.Content>
+                    VBA
+                </RadioButton.Content>
+                <RadioButton.ToolTip>
+                    Это Языки программирования
+                </RadioButton.ToolTip>
+            </RadioButton>
+            <RadioButton GroupName="Tech" Click="RadioButton_Click" Content="WPF" Checked="RadioButton_Checked_1" ToolTip="Это группа технологий"/>
+            <RadioButton GroupName="Tech" Click="RadioButton_Click" Content="QML" Checked="RadioButton_Checked_1"/>
+            <RadioButton GroupName="Tech" Click="RadioButton_Click" Content="ASP.NET" Checked="RadioButton_Checked_1"/>
+        </StackPanel>
+        <Image Source="images.jpg" Grid.Column="4" Grid.Row="2" ToolTipService.Placement="Mouse" >
+            <Image.ToolTip>
+                <ToolTip HasDropShadow="True"
+                         Placement="Left"  HorizontalOffset="15" VerticalOffset="-100" ToolTipService.InitialShowDelay="4">
+                    <StackPanel>
+                        <TextBlock Text="БГУ СВПП"/>    
+                        <Image Source="images_1.png"/>
+                    </StackPanel>
+                </ToolTip>
+            </Image.ToolTip>
+        </Image>
+        <Button  Grid.Column="0" Grid.Row="3" Content="Popup" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+        <Popup x:Name="popup" StaysOpen="False" Placement="Mouse" AllowsTransparency="True">
+            <TextBox>Контент</TextBox>
+        </Popup>
+        <GroupBox Header="Заголовок группы" Padding="1" Margin="5" Grid.Column="1" Grid.Row="3">
+            <StackPanel Margin="5">
+                <RadioButton IsChecked="True" Margin="3">Первый элемент</RadioButton>
+                <TextBlock Text="Второй элемент" Margin="3"/>
+                <TextBox Margin="3" >Третий элемент</TextBox>
+                <Button Margin="3" >Четвертый элемент</Button>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox  Padding="1" Margin="5" Grid.Column="2" Grid.Row="3">
+            <GroupBox.Header>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="images.jpg" Width="10" Height="10"/>
+                    <Label Content="Заголовок с картинкой"/>
+                </StackPanel>
+            </GroupBox.Header>
+            <StackPanel Margin="5">
+                <RadioButton IsChecked="True" Margin="3">Первый элемент</RadioButton>
+                <TextBlock Text="Второй элемент" Margin="3"/>
+                <TextBox Margin="3" >Третий элемент</TextBox>
+                <Button Margin="3" >Четвертый элемент</Button>
+            </StackPanel>
+        </GroupBox>
+        <StackPanel Grid.Column="3" Grid.Row="3">
+            <Expander Header="Один список">
+                <TextBlock>Однажды в студеную зимнюю пору...</TextBlock>
+            </Expander>
+            <Expander Header="Второй список" IsExpanded="True">
+                <StackPanel>
+                    <TextBlock>Отметьте, что вам больше нравится</TextBlock>
+                    <CheckBox>WinForms</CheckBox>
+                    <CheckBox>WPF</CheckBox>
+                    <CheckBox>ASP.NET</CheckBox>
+                </StackPanel>
+            </Expander>
+            <Expander Expanded="Expander_Expanded" Collapsed="Expander_Collapsed" >
+                <Expander.Header>
+                    <Button Background="LightGoldenrodYellow" Content="Третий список"/>
+                </Expander.Header>
+                <StackPanel>
+                    <TextBlock>Отметьте, что вам больше нравится</TextBlock>
+                    <CheckBox>WinForms</CheckBox>
+                    <CheckBox>WPF</CheckBox>
+                    <CheckBox>ASP.NET</CheckBox>
+                </StackPanel>
+            </Expander>
+        </StackPanel>
+        <ScrollViewer x:Name="scroll" Grid.Column="4" Grid.Row="3" VerticalScrollBarVisibility="Visible">
+            <StackPanel Grid.Column="4" Grid.Row="3">
+                <Button Content="Down" Click="Button_Click_2"/>
+                <Label Content="Data1"/>
+                <Label Content="Data1"/>
+                <Label Content="Data1"/>
+                <Label Content="Data1"/>
+                <Label Content="Data1"/>
+                <Button Content="Up" Click="Button_Click_3"/>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>

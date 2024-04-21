@@ -64,6 +64,9 @@
     <Compile Include="Controls_Base.xaml.cs">
       <DependentUpon>Controls_Base.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls_Base_two.xaml.cs">
+      <DependentUpon>Controls_Base_two.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DockPanel.xaml.cs">
       <DependentUpon>DockPanel.xaml</DependentUpon>
     </Compile>
@@ -97,6 +100,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls_Base.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls_Base_two.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -204,6 +211,9 @@
     <Folder Include="controls\" />
     <Folder Include="layout\" />
     <Folder Include="UI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
