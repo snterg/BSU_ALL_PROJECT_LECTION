@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:BSU_ALL_PROJECT_LECTION"
         xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Controls_Base_two" Height="600" Width="800">
+        Title="Controls_Base_two" Height="800" Width="800">
     <Grid ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -19,7 +19,7 @@
             <RowDefinition Height="3*"/>
             <RowDefinition Height="2*"/>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Grid.Column="0">
             <TextBlock Text="Текст"/>
@@ -236,5 +236,14 @@
             <ProgressBar x:Name="progress" Minimum="0" Maximum="100" Value="0" Height="25"/>
 
         </StackPanel>
+        <Calendar x:Name="calendar1" FirstDayOfWeek="Monday" SelectionMode="MultipleRange"
+ SelectedDatesChanged="calendar_SelectedDatesChanged" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2">
+            <Calendar.BlackoutDates>
+                <CalendarDateRange Start="5/5/2024" End="5/9/2024"></CalendarDateRange>
+            </Calendar.BlackoutDates>
+        </Calendar>
+
+        <DatePicker Name="datePicker1" IsDropDownOpen="True" SelectedDateFormat="Short"  Grid.Column="4" Grid.Row="3" />
+
     </Grid>
 </Window>
