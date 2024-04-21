@@ -144,7 +144,7 @@
             <Button x:Name="button13" Content="Кнопка 3"  Click="button13_Click" />
         </StackPanel>
 
-        <StackPanel x:Name="buttonsStack_5" Background="Black" Grid.Column="1" Grid.Row="1" >
+        <StackPanel x:Name="buttonsStack_5" Background="Black" Grid.Column="1" Grid.Row="2" >
             <Button x:Name="button14" Content="Кнопка 1" Style="{StaticResource ResourceKey=Triggers}"  />
             <Button x:Name="button15" Content="Кнопка 2"  />
             <Button x:Name="button16" Background="Turquoise"  Content="Кнопка 3"  />

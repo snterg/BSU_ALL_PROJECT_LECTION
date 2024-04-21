@@ -24,7 +24,7 @@
 
         <StackPanel Grid.Column="1" Grid.Row="0">
             <Button x:FieldModifier="private" x:Name="button2" Content="Hello World" />
-            
+
             <Button x:FieldModifier="internal" x:Name="button3" Content="Hello WPF" />
         </StackPanel>
         <StackPanel Grid.Row="0" Grid.Column="2" Background="Bisque">
@@ -55,7 +55,7 @@
         <StackPanel Grid.Column="3" Grid.Row="1" >
             <Button Content="SolidBrush">
                 <Button.Background>
-                    <SolidColorBrush Color="Bisque"></SolidColorBrush>
+                    <SolidColorBrush Color="Violet"></SolidColorBrush>
                 </Button.Background>
             </Button>
             <Button Content="LinearGradientBrush" Foreground="Wheat">
@@ -80,6 +80,17 @@
         <StackPanel Grid.Column="0" Grid.Row="2" >
             <Button Content="IsDefault" Name="IsDefault" IsDefault="True" Click="Button_Click"/>
             <Button Content="IsCancel" x:Name="IsCancel" IsCancel="True" Click="Button_Click_1"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="2" >
+            <Label Background="Black" Foreground="White" x:Name="repeatl"/>
+            <RepeatButton Content="RepeatButton"  Click="Repeatbtn"/>
+            <ToggleButton Content="ToggleButton" IsThreeState="False"   Click="ToggleButton_Click"/>
+            <ToggleButton Content="ToggleButtonThreeState" IsThreeState="True"  Click="ToggleButton_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="2" >
+            <CheckBox IsThreeState="True" IsChecked="False" Content="Неотмечено" Click="CheckBox_Click" Unchecked="CheckBox_Unchecked"  />
+            <CheckBox IsThreeState="True" IsChecked="True" Content="Отмечено" Click="CheckBox_Click" Checked="CheckBox_Checked"/>
+            <CheckBox IsThreeState="True" IsChecked="{x:Null}" Content="Неопределено" Click="CheckBox_Click" Indeterminate="CheckBox_Indeterminate"/>
         </StackPanel>
     </Grid>
 </Window>

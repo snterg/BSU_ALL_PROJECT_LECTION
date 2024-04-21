@@ -200,5 +200,10 @@
   <ItemGroup>
     <Resource Include="images.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="controls\" />
+    <Folder Include="layout\" />
+    <Folder Include="UI\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
