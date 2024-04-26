@@ -35,7 +35,7 @@ namespace BSU_ALL_PROJECT_LECTION
             this.Resources.Add("buttonGradientBrush", gradientBrush);
 
             // установка ресурса у кнопки
-            button1.Background = (Brush)this.TryFindResource("buttonGradientBrush");
+            button1.Background = (Brush)this.FindResource("buttonGraientBrush");
             // или так
             button1.Foreground = (Brush)this.Resources["buttonGradientBrush"];
 
@@ -47,7 +47,7 @@ namespace BSU_ALL_PROJECT_LECTION
 
             SolidColorBrush buttonBrush = (SolidColorBrush)this.TryFindResource("buttonBrush");
             buttonBrush.Color = Colors.LimeGreen;
-            
+
 
         }
     }

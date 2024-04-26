@@ -5,19 +5,85 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BSU_ALL_PROJECT_LECTION"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="800" d:DesignWidth="800"
       Title="Binding">
+    <Page.Resources>
+        <local:Users x:Key="users" ID="1" Car="True" Name="Ivan" />
+    </Page.Resources>
 
     <Grid>
-        <StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
             <Slider Name="sliderFontSize" Margin="3" Minimum="1" Maximum="40" 
 Value="26" TickFrequency="1" TickPlacement="TopLeft">
             </Slider>
-            <TextBlock Margin="10,10,-273.6,10" Text="Simple Text" Name="lblSampleText"
+            <TextBlock Text="Simple Text" Name="lblSampleText"
 FontSize="{Binding ElementName=sliderFontSize, Path=Value, Mode=TwoWay}" MouseDown="lblSampleText_MouseDown"  >
             </TextBlock>
             <Label Content="{Binding ElementName=sliderFontSize, Path=Value}"/>
         </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Background="Bisque">
+            <TextBlock Margin="10" Text="Simple Text" Name="lblSampleText_1"
+            FontSize="{Binding ElementName=sliderFontSize_1, Path=Value, Mode=TwoWay}" >
+            </TextBlock>
+
+            <TextBox Text="{Binding ElementName=lblSampleText_1, Path=FontSize, Mode=TwoWay}" Name="txtFontSize" />
+
+            <Slider Name="sliderFontSize_1" Margin="3"
+Minimum="1" Maximum="40"
+Value="{Binding ElementName=txtFontSize, Path=Text, Mode=TwoWay}"
+TickFrequency="1" TickPlacement="TopLeft">
+            </Slider>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Background="PaleGreen">
+            <TextBox x:Name="textBox1" Height="30" />
+            <TextBox x:Name="textBox2" Height="30"
+            Text="{Binding ElementName=textBox1, Path=Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <Button Content="Применить" Click="Button_Click"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Background="PaleGreen">
+            <Label Content="{Binding Source={StaticResource users},Path=ID}"/>
+            <TextBlock Text="{Binding Source={StaticResource users},Path=Car}"/>
+            <Button Content="{Binding Source={StaticResource users},Path=Name}"/>
+
+        </StackPanel >
+        <StackPanel  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3">
+            <ListBox DataContext="{Binding Source={StaticResource users}}" >
+                <ListBoxItem>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Label  Content="{Binding ID}"/>
+                        <Label  Content="{Binding Car}"/>
+                        <Label  Content="{Binding Name}"/>
+                        <TextBlock x:Name="NULLVAL"/>
+                        <TextBox Text="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Background, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBox Text="{Binding RelativeSource={RelativeSource Mode=Self}, Path=FontSize, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    </StackPanel>
+                </ListBoxItem>
+            </ListBox>
+        </StackPanel>
+        <Grid Background="{Binding ElementName=Textbox1,Path=Text}" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="3" x:Name="innergrid" >
+            <StackPanel>
+                <Label Background="GreenYellow" Content="{Binding ElementName=Textbox1,Path=Background, Mode=TwoWay, TargetNullValue=это не цвет}" />
+                <TextBlock Text="{Binding ElementName=Textbox1, Path=Background, StringFormat=Введен текст {0}}"/>
+                <TextBox Foreground="MediumVioletRed"
+ Background="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type Grid}}, Path=Background,StringFormat=Введен цвет {0}}" Name="Textbox1" TextChanged="Textbox1_TextChanged"/>
+            </StackPanel>
+        </Grid>
 
     </Grid>
 </Page>

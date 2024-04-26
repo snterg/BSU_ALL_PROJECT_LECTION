@@ -18,9 +18,9 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <GridSplitter Grid.Column="1"  Grid.Row="0" ShowsPreview="False" Width="3"
+        <GridSplitter Grid.Column="1"  Grid.Row="0" ShowsPreview="False" Width="30"
         HorizontalAlignment="Center" VerticalAlignment="Stretch" />
-        <GridSplitter Grid.Row="1" Grid.ColumnSpan="3" Height="3"
+        <GridSplitter Grid.Row="1" Grid.ColumnSpan="3" Height="30"
         HorizontalAlignment="Stretch" VerticalAlignment="Center" />
         <Canvas Grid.Column="0" Grid.Row="0" Background="AliceBlue">
             <TextBlock >Левая панель</TextBlock>

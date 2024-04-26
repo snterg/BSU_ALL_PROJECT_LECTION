@@ -8,7 +8,7 @@
       d:DesignHeight="200" d:DesignWidth="450"
       Title="StackPanel" WindowTitle="StackPanel">
     <Grid>
-        <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft"> <!--Horizontal/ FlowDirection-->
+        <StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" Name="stpanel"> <!--Horizontal/ FlowDirection-->
             <Button Content="1" />
             <Button Content="2" />
             <Button Content="3" />

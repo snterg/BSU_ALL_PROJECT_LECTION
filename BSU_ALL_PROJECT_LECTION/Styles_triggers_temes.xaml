@@ -106,7 +106,7 @@
 
     </Window.Resources>
 
-    <Grid>
+    <Grid Style="{DynamicResource ResourceKey=GridStyle}" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>

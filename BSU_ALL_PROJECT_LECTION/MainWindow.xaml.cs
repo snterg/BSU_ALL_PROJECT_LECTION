@@ -25,10 +25,10 @@ namespace BSU_ALL_PROJECT_LECTION
 
         public string FIO { get; set; }
 
-        public override string ToString()
-        {
-            return $"BSU_PERSON, его поля\n:{this.idNum}, {FIO}";
-        }
+        //public override string ToString()
+        //{
+        //    return $"BSU_PERSON, его поля\n:{this.idNum}, {FIO}";
+        //}
     }
     public partial class MainWindow : Window
 
@@ -53,6 +53,11 @@ namespace BSU_ALL_PROJECT_LECTION
                 MessageBox.Show(text);
             }
 
+        }
+
+        private void btn3_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Привет");
         }
     }
 }

@@ -22,6 +22,9 @@ namespace BSU_ALL_PROJECT_LECTION
         public ungrid()
         {
             InitializeComponent();
+            Label x = new Label();
+            x.Content = "Hello";
+            ugrid.Children.Add(x);
         }
     }
 }

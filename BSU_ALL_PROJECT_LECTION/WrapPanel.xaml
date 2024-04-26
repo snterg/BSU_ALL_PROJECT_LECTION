@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="WrapPanel" WindowTitle="WrapPanel">
 
-    <WrapPanel Background="Beige" Orientation="Horizontal">
+    <WrapPanel Background="Beige" Orientation="Horizontal" ItemHeight="25">
         <Button Background="AliceBlue" Content="Кнопка 1" />
         <Button Background="Blue" Content="Кнопка 2" />
         <Button Background="Aquamarine" Content="Кнопка 3" Height="30"/>

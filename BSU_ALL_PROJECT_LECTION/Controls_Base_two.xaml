@@ -7,6 +7,7 @@
         xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
         mc:Ignorable="d"
         Title="Controls_Base_two" Height="800" Width="800">
+
     <Grid ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -43,7 +44,7 @@
             <TextBox x:Name="t1" TextWrapping="Wrap" TextChanged="TextBox_TextChanged"/>
             <TextBox  x:Name="t2" TextWrapping="Wrap" AcceptsReturn="True"/>
             <TextBox x:Name="t3" TextWrapping="Wrap" AcceptsTab="True" />
-            <TextBox x:Name="t4" TextWrapping="Wrap" SelectionBrush="Blue" MouseDoubleClick="t4_MouseDoubleClick" SpellCheck.IsEnabled="True" Language="ru-ru"  />
+            <TextBox x:Name="t4" TextWrapping="Wrap" SelectionBrush="IndianRed" MouseDoubleClick="t4_MouseDoubleClick" SpellCheck.IsEnabled="True" Language="ru-ru"  />
         </StackPanel>
         <StackPanel Grid.Row="0" Grid.Column="2">
             <PasswordBox PasswordChar="*" MinHeight="30" />
@@ -82,7 +83,7 @@
                 <TextBlock>iPhone 6S Plus</TextBlock>
                 <TextBlock>Microsoft Lumia 950</TextBlock>
             </ComboBox>
-            <ComboBox Name="phonesList_1" VerticalAlignment="Top">
+            <ComboBox Name="phonesList_1" SelectedIndex="3" VerticalAlignment="Top">
                 <ComboBoxItem>
                     <Button>Button</Button>
                 </ComboBoxItem>
@@ -108,7 +109,7 @@
             <ListView Name="phonesList_2" ItemsSource="{DynamicResource ResourceKey=persons}" MouseDoubleClick="phonesList_2_MouseDoubleClick" >
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn DisplayMemberBinding="{Binding Path=i}">Индекс</GridViewColumn>
+                        <GridViewColumn Header="Индекс" DisplayMemberBinding="{Binding Path=i}"></GridViewColumn>
                         <GridViewColumn DisplayMemberBinding="{Binding Path=age}" Width="100">Возраст</GridViewColumn>
                         <GridViewColumn DisplayMemberBinding="{Binding Path=Name_p}">Имя</GridViewColumn>
                     </GridView>
@@ -122,7 +123,7 @@
                 </ListView.Resources>
             </ListView>
         </StackPanel>
-        <StackPanel  Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2">
+        <StackPanel  Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2">
             <TabControl x:Name="products" >
                 <TabItem x:Name="smartphonesTab">
                     <TabItem.Header>
@@ -232,7 +233,7 @@
         <StackPanel Grid.Row="4" Grid.Column="1">
             <Label x:Name="slider_l"/>
             <Slider Value="0" Minimum="0" Maximum="100" 
- IsSelectionRangeEnabled="True" ValueChanged="Slider_ValueChanged"  TickFrequency="25" TickPlacement="Both"/>
+ IsSelectionRangeEnabled="True" ValueChanged="Slider_ValueChanged"  TickFrequency="1" TickPlacement="TopLeft"/>
             <ProgressBar x:Name="progress" Minimum="0" Maximum="100" Value="0" Height="25"/>
 
         </StackPanel>

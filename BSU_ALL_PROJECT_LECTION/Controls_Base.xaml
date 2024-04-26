@@ -28,7 +28,7 @@
             <Button x:FieldModifier="internal" x:Name="button3" Content="Hello WPF" />
         </StackPanel>
         <StackPanel Grid.Row="0" Grid.Column="2" Background="Bisque">
-            <Button Content="hide" Visibility="Hidden" Foreground="White"  Background="red" Height="20"/>
+            <Button x:Name="hide" Content="hide" Visibility="Hidden" Foreground="White"  Background="red" Height="20"/>
             <Button Content="Hidden" Background="Green" Height="20"/>
         </StackPanel>
         <StackPanel Grid.Row="0" Grid.Column="3" Background="Bisque">
@@ -36,13 +36,13 @@
             <Button Content="Collapsed" Background="Green" Height="20"/>
         </StackPanel>
         <StackPanel Grid.Row="0" Grid.Column="4" Background="Bisque">
-            <Button Content="FontFamily" FontFamily="EngraversGothic BT"/>
+            <Button Content="FontFamily" FontFamily="EngraversGothic BT" FontSize="36" FontStyle="Oblique" />
             <Button Content="FontSize" FontSize="24"/>
             <Button Content="FontStyle" FontStyle="Oblique"/>
             <Button Content="FontWeight" FontWeight="ExtraBlack"/>
             <Button Content="FontStretchFontStretchFontStretch" FontStretch="Normal"/>
         </StackPanel>
-        <Button Cursor="ArrowCD" Grid.Column="0" Grid.Row="1" Content="Cursor"/>
+        <Button Cursor="Wait"  Grid.Column="0" Grid.Row="1" Content="Cursor"/>
         <StackPanel Grid.Column="1" Grid.Row="1">
             <TextBlock Text="LeftToRight" FlowDirection="LeftToRight"/>
             <TextBlock Text="RightToLeft" FlowDirection="RightToLeft"/>
@@ -83,8 +83,8 @@
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="2" >
             <Label Background="Black" Foreground="White" x:Name="repeatl"/>
-            <RepeatButton Content="RepeatButton"  Click="Repeatbtn"/>
-            <ToggleButton Content="ToggleButton" IsThreeState="False"   Click="ToggleButton_Click"/>
+            <RepeatButton Content="RepeatButton" Delay="1000" Interval="1000" Click="Repeatbtn"/>
+            <ToggleButton Content="ToggleButton" IsThreeState="False" Click="ToggleButton_Click"/>
             <ToggleButton Content="ToggleButtonThreeState" IsThreeState="True"  Click="ToggleButton_Click"/>
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.Row="2" >
@@ -124,7 +124,7 @@
             </Image.ToolTip>
         </Image>
         <Button  Grid.Column="0" Grid.Row="3" Content="Popup" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
-        <Popup x:Name="popup" StaysOpen="False" Placement="Mouse" AllowsTransparency="True">
+        <Popup x:Name="popup" StaysOpen="True" Placement="Mouse" AllowsTransparency="True">
             <TextBox>Контент</TextBox>
         </Popup>
         <GroupBox Header="Заголовок группы" Padding="1" Margin="5" Grid.Column="1" Grid.Row="3">

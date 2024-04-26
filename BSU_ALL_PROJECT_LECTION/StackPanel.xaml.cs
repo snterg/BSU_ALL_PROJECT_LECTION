@@ -23,6 +23,9 @@ namespace BSU_ALL_PROJECT_LECTION
         public StackPanel()
         {
             InitializeComponent();
+            Button button = new Button();
+            button.Content = "Hello";
+            stpanel.Children.Add(button);
         }
     }
 }

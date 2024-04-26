@@ -30,6 +30,7 @@ namespace BSU_ALL_PROJECT_LECTION
         public Controls_Base()
         {
             InitializeComponent();
+            hide.Visibility = Visibility.Visible;
             btn.Content = 22.0 / 7;
             btncode = new Button { Content = "From C#" };
             btncode.Background = new LinearGradientBrush(Colors.Red, Colors.Green, new Point(0, 0), new Point(1, 1));

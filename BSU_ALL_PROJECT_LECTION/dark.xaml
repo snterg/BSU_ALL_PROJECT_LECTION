@@ -4,4 +4,8 @@
         <Setter Property="Foreground" Value="DarkCyan" />
         <Setter Property="Background" Value="Gray" />
     </Style>
+    <Style x:Key="GridStyle">
+        <Setter Property="Control.Foreground" Value="DarkCyan" />
+        <Setter Property="Control.Background" Value="Gray" />
+    </Style>
 </ResourceDictionary>

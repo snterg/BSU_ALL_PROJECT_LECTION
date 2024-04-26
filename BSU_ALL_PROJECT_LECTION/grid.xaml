@@ -9,8 +9,9 @@
     <!--внутри парного тега определяем кол-во строк и столбцов для элементов.-->
     <Grid x:Name="grid_" ShowGridLines="True">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="0.25*"></ColumnDefinition>
+            <ColumnDefinition />
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -18,5 +19,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Button Content="btn" Grid.Column="4" ></Button>
+        <Button Content="btn_1" Grid.ColumnSpan="2" Grid.RowSpan="3"></Button>
     </Grid>
 </Window>
