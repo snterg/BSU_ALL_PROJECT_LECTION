@@ -55,6 +55,21 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.6.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -63,6 +78,9 @@
     </ApplicationDefinition>
     <Compile Include="Binding.xaml.cs">
       <DependentUpon>Binding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="bind_many.xaml.cs">
+      <DependentUpon>bind_many.xaml</DependentUpon>
     </Compile>
     <Compile Include="Canvas.xaml.cs">
       <DependentUpon>Canvas.xaml</DependentUpon>
@@ -82,6 +100,7 @@
     <Compile Include="modals_window.xaml.cs">
       <DependentUpon>modals_window.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page2.xaml.cs" />
     <Compile Include="Resources.xaml.cs">
       <DependentUpon>Resources.xaml</DependentUpon>
     </Compile>
@@ -91,6 +110,7 @@
     <Compile Include="StackPanel.xaml.cs">
       <DependentUpon>StackPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="stat.cs" />
     <Compile Include="Styles_triggers_temes.xaml.cs">
       <DependentUpon>Styles_triggers_temes.xaml</DependentUpon>
     </Compile>
@@ -104,6 +124,10 @@
     <Page Include="Binding.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="bind_many.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Canvas.xaml">
       <SubType>Designer</SubType>
@@ -167,6 +191,10 @@
     <Page Include="Page1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Resources.xaml">
       <SubType>Designer</SubType>

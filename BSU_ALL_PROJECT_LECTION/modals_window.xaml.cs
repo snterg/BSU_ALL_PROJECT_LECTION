@@ -67,5 +67,13 @@ namespace BSU_ALL_PROJECT_LECTION
             }
 
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            stat.txt = input.Text;
+            string txt_1 = input.Text;
+            Page2 page = new Page2(txt_1);
+            page.Show();
+        }
     }
 }

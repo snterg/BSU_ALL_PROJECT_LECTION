@@ -19,5 +19,10 @@
         </Grid.ColumnDefinitions>
         <Button Content="modal" Click="Button_Click" Grid.Column="0" Grid.Row="0"/>
         <Button Content="setcontent" Click="Button_Click_1" Grid.Column="1" Grid.Row="0"/>
+        <StackPanel Grid.Row="0" Grid.Column="2">
+            <TextBox x:Name="input" Background="AntiqueWhite"/>
+            <Button Content="Отправить" Grid.Column="1" Grid.Row="0" Click="Button_Click_2"/>
+        </StackPanel>
+        <!--<Frame Source="Page1.xaml"/>-->
     </Grid>
 </Window>
