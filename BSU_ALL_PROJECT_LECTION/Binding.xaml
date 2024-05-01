@@ -52,7 +52,7 @@ TickFrequency="1" TickPlacement="TopLeft">
         <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Background="PaleGreen">
             <TextBox x:Name="textBox1" Height="30" />
             <TextBox x:Name="textBox2" Height="30"
-            Text="{Binding ElementName=textBox1, Path=Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            Text="{Binding ElementName=textBox1, Path=Text, Mode=TwoWay, UpdateSourceTrigger=Explicit}" />
             <Button Content="Применить" Click="Button_Click"/>
         </StackPanel>
 

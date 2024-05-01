@@ -10,26 +10,29 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace BSU_ALL_PROJECT_LECTION
 {
     /// <summary>
-    /// Логика взаимодействия для Page2.xaml
+    /// Логика взаимодействия для not_stand_window_3.xaml
     /// </summary>
-    public partial class Page2 : Window
+    public partial class not_stand_window_3 : Window
     {
-        public Page2()
+        public not_stand_window_3()
         {
             InitializeComponent();
-            static_t.Text+= " " + stat.txt;
         }
 
-        public Page2(string str):this()
-        {
 
-            construct_t.Text += " "+str;
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
     }
 }

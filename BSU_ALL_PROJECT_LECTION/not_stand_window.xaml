@@ -1,0 +1,20 @@
+﻿<Window x:Class="BSU_ALL_PROJECT_LECTION.not_stand_window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BSU_ALL_PROJECT_LECTION"
+        mc:Ignorable="d"
+        Name="win" Title="not_stand_window" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None" Background="Transparent" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Window.Resources>
+        <ImageBrush x:Key="layout" ImageSource="lAYOUT.png"/>
+    </Window.Resources>
+    <Grid Background="{StaticResource layout}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnscale" Content="Развернуть" Foreground="green" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Background="Transparent" Margin="123,193,0,0" Click="Button_Click" />
+        <Button Content="Закрыть" Grid.Column="1" Background="Transparent" Foreground="Red" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="144,181,0,0" Click="Button_Click_1" />
+    </Grid>
+</Window>

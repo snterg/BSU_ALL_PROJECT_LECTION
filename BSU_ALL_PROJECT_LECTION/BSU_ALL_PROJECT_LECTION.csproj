@@ -85,6 +85,9 @@
     <Compile Include="Canvas.xaml.cs">
       <DependentUpon>Canvas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="commands_el.xaml.cs">
+      <DependentUpon>commands_el.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls_Base.xaml.cs">
       <DependentUpon>Controls_Base.xaml</DependentUpon>
     </Compile>
@@ -99,6 +102,15 @@
     </Compile>
     <Compile Include="modals_window.xaml.cs">
       <DependentUpon>modals_window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="not_stand_window.xaml.cs">
+      <DependentUpon>not_stand_window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="not_stand_window_2.xaml.cs">
+      <DependentUpon>not_stand_window_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="not_stand_window_3.xaml.cs">
+      <DependentUpon>not_stand_window_3.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page2.xaml.cs" />
     <Compile Include="Resources.xaml.cs">
@@ -130,6 +142,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Canvas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="commands_el.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -185,6 +201,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="modals_window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="not_stand_window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="not_stand_window_2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="not_stand_window_3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -261,6 +289,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LAYOUT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons_519578.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="close_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
