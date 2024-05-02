@@ -82,6 +82,9 @@
     <Compile Include="bind_many.xaml.cs">
       <DependentUpon>bind_many.xaml</DependentUpon>
     </Compile>
+    <Compile Include="brush_win.xaml.cs">
+      <DependentUpon>brush_win.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Canvas.xaml.cs">
       <DependentUpon>Canvas.xaml</DependentUpon>
     </Compile>
@@ -140,6 +143,10 @@
     <Page Include="bind_many.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="brush_win.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Canvas.xaml">
       <SubType>Designer</SubType>
@@ -298,6 +305,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="close_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="scale_1200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fract.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
