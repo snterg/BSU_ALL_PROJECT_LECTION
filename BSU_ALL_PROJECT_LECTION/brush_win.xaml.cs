@@ -32,5 +32,10 @@ namespace BSU_ALL_PROJECT_LECTION
             solidbtn.Foreground = new SolidColorBrush(Color.FromRgb(207, 255, 255));
 
         }
+
+        private void Grid_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Это пузырьковое событие");
+        }
     }
 }

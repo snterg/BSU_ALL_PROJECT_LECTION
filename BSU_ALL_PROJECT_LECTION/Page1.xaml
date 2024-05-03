@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:BSU_ALL_PROJECT_LECTION"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Page in Window" WindowTitle="Page in Window">
+      Title="Page in Window" WindowTitle="Page in Window" ShowsNavigationUI="True" KeyboardNavigation.ControlTabNavigation="Once">
     <Grid Background="Azure">
         <Border BorderThickness="20" BorderBrush="Red">
             <TextBlock Text="HELLO" FontSize="72" HorizontalAlignment="Center" VerticalAlignment="Center" Background="DimGray">

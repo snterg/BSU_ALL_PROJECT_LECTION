@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:BSU_ALL_PROJECT_LECTION"
         mc:Ignorable="d"
         Title="brush_win" Height="450" Width="800">
-    <Grid>
+    <Grid ButtonBase.Click="Grid_Click">
         <Grid.Background>
             <ImageBrush ImageSource="scale_1200.png" Stretch="Fill"/>
         </Grid.Background>
@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
         <Button Content="SolidColorBrush" Name="solidbtn" Grid.Column="0" Grid.Row="0" Click="Button_Click">
             <Button.Background>
-                <SolidColorBrush Color="Blue" Opacity="0.8" />
+                <SolidColorBrush Color="AliceBlue" Opacity="0.8" />
             </Button.Background>
             <Button.Foreground>
                 <SolidColorBrush Color="White"/>
