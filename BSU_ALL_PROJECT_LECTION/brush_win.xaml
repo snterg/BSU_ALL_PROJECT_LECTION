@@ -20,7 +20,7 @@
             <RowDefinition/>
                 <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button Content="SolidColorBrush" Name="solidbtn" Grid.Column="0" Grid.Row="0" Click="Button_Click">
+        <Button Content="SolidColorBrush_1" Name="solidbtn" Grid.Column="0" Grid.Row="0" Click="Button_Click">
             <Button.Background>
                 <SolidColorBrush Color="AliceBlue" Opacity="0.8" />
             </Button.Background>

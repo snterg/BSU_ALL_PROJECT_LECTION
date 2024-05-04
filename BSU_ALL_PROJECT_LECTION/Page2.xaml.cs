@@ -24,6 +24,7 @@ namespace BSU_ALL_PROJECT_LECTION
         {
             InitializeComponent();
             static_t.Text+= " " + stat.txt;
+          //  System.Windows.Application.Current.Shutdown();
         }
 
         public Page2(string str):this()

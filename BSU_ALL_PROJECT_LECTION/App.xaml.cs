@@ -13,6 +13,6 @@ namespace BSU_ALL_PROJECT_LECTION
     /// </summary>
     public partial class App : Application
     {
-
+      
     }
 }
