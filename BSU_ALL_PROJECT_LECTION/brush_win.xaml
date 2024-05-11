@@ -43,8 +43,9 @@
         <Button Content="RadialGradientBrush" Grid.Column="2" Grid.Row="0">
             <Button.Background>
                 <RadialGradientBrush GradientOrigin="0.4,0.1">
-                    <GradientStop Color="Black" Offset="1" />
-                    <GradientStop Color="White" Offset="0" />
+                    <GradientStop Color="DarkRed" Offset="1" />
+                    <GradientStop Color="DarkGreen" Offset=".5" />
+                    <GradientStop Color="BlueViolet" Offset="0" />
                 </RadialGradientBrush>
             </Button.Background>
             <Button.Foreground>
@@ -77,7 +78,7 @@
 
         <TextBlock Grid.Column="0" Grid.Row="2">
             <TextBlock.Background>
-                <ImageBrush ImageSource="fract.jpg" Viewport="0,0,0.25,0.25" TileMode="Tile" />
+                <ImageBrush ImageSource="fract.jpg" Viewport="0,0,0.25,0.25" TileMode="FlipY" />
             </TextBlock.Background>
         </TextBlock>
       

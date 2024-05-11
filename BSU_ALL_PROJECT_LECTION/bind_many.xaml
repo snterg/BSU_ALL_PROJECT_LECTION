@@ -12,7 +12,7 @@
             <StackPanel>
                 <TextBlock Margin="20" Text="My TEXT HERE" Background="{Binding ElementName=ClrPcker_Background, Path=SelectedColorText, UpdateSourceTrigger=PropertyChanged}" Foreground="{Binding ElementName=color_items, Path=SelectedItem, UpdateSourceTrigger=PropertyChanged}" FontSize="{Binding ElementName=slider_val, Path=Value}" FontFamily="{Binding ElementName=tgbtn, Path=Content}" Opacity="{Binding ElementName=lcanva, Path=Content}">
                 </TextBlock>
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal" Drop="StackPanel_Drop" >
                     <Label Content="Background:"/>
                     <xctk:ColorPicker Name="ClrPcker_Background" SelectedColorChanged="ClrPcker_Background_SelectedColorChanged" ></xctk:ColorPicker>
                 </StackPanel>
@@ -28,7 +28,7 @@
                     <Label Content="FontFamily:"/>
                     <ToggleButton Name="tgbtn" Click="ToggleButton_Click" Width="100" Height="100"/>
                 </StackPanel>
-                <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Vertical" Drop="StackPanel_Drop_1" >
                     <Label Name="lcanva" ContentStringFormat="Opacity {0}" />
                     <Canvas x:Name="canva" Background="AliceBlue" Width="400" Height="100" MouseMove="canva_MouseEnter"></Canvas>
                 </StackPanel>

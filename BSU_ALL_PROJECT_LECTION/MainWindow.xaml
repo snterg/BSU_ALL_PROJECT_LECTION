@@ -7,9 +7,13 @@
         mc:Ignorable="d"
         Title="Лекция 1" Height="450" Width="800">
     <Grid x:Name="grid">
-        <!--<Frame Source="Page1.xaml"/>-->
-        <TextBox Name="tb" Height="100">Введите текст</TextBox>
-        <Button x:Name="btn3"  Height="100" VerticalAlignment="Bottom" Click="btn3_Click">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Frame Source="Page1.xaml" Grid.Row="0"/>
+        <TextBox Name="tb" Height="100" Grid.Row="1">Введите текст</TextBox>
+        <!--<Button x:Name="btn3"  Height="100" VerticalAlignment="Bottom" Click="btn3_Click">
             <Button.Content>
                 button3
             </Button.Content>
@@ -18,7 +22,7 @@
             <Button.Content>
                 <local:BSU_PERSON idNum="4" FIO="IVANOV II"/>
             </Button.Content>
-        </Button>
+        </Button>-->
         
     </Grid>
 </Window>

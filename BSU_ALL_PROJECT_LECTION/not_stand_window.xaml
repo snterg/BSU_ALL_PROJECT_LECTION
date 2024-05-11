@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BSU_ALL_PROJECT_LECTION"
         mc:Ignorable="d"
-        Name="win" Title="not_stand_window" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None" Background="Transparent" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+        Name="win" Title="not_stand_window" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None"  Background="Transparent" MouseLeftButtonDown="Window_MouseLeftButtonDown">
     <Window.Resources>
         <ImageBrush x:Key="layout" ImageSource="lAYOUT.png"/>
     </Window.Resources>

@@ -44,5 +44,15 @@ namespace BSU_ALL_PROJECT_LECTION
             lcanva.Content = (e.GetPosition(this).X- e.GetPosition(this).Y) / 100;
            
         }
+
+        private void StackPanel_Drop(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void StackPanel_Drop_1(object sender, DragEventArgs e)
+        {
+
+        }
     }
 }

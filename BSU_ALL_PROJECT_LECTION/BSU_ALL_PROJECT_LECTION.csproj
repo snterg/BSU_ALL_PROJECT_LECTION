@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>BSU_ALL_PROJECT_LECTION</RootNamespace>
     <AssemblyName>BSU_ALL_PROJECT_LECTION</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -106,6 +106,9 @@
     </Compile>
     <Compile Include="modals_window.xaml.cs">
       <DependentUpon>modals_window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="multithread.xaml.cs">
+      <DependentUpon>multithread.xaml</DependentUpon>
     </Compile>
     <Compile Include="not_stand_window.xaml.cs">
       <DependentUpon>not_stand_window.xaml</DependentUpon>
@@ -209,6 +212,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="modals_window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="multithread.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
