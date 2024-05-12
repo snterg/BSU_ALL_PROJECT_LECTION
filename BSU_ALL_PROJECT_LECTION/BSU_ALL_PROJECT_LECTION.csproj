@@ -89,6 +89,9 @@
     <Compile Include="Canvas.xaml.cs">
       <DependentUpon>Canvas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="clr_picker_BSU.xaml.cs">
+      <DependentUpon>clr_picker_BSU.xaml</DependentUpon>
+    </Compile>
     <Compile Include="commands_el.xaml.cs">
       <DependentUpon>commands_el.xaml</DependentUpon>
     </Compile>
@@ -123,6 +126,9 @@
     <Compile Include="Resources.xaml.cs">
       <DependentUpon>Resources.xaml</DependentUpon>
     </Compile>
+    <Compile Include="simple_el_u.xaml.cs">
+      <DependentUpon>simple_el_u.xaml</DependentUpon>
+    </Compile>
     <Compile Include="split_frame.xaml.cs">
       <DependentUpon>split_frame.xaml</DependentUpon>
     </Compile>
@@ -137,6 +143,9 @@
       <DependentUpon>ungrid.xaml</DependentUpon>
     </Compile>
     <Compile Include="users.cs" />
+    <Compile Include="users_el.xaml.cs">
+      <DependentUpon>users_el.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WrapPanel.xaml.cs">
       <DependentUpon>WrapPanel.xaml</DependentUpon>
     </Compile>
@@ -153,6 +162,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Canvas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="clr_picker_BSU.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -243,6 +256,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="simple_el_u.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="split_frame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -256,6 +273,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ungrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="users_el.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

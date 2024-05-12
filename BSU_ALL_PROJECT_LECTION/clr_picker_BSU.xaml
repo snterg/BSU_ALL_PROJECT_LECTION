@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="BSU_ALL_PROJECT_LECTION.clr_picker_BSU"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BSU_ALL_PROJECT_LECTION"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="300" Name="colorPicker">
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="Redslider" Color="Red"/>
+        <SolidColorBrush x:Key="Greenslider" Color="Green"/>
+        <SolidColorBrush x:Key="Blueslider" Color="Blue"/>
+        <Style TargetType="Slider">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="{Binding ElementName=colorPicker, Path=Red}" Grid.Row="0"/>
+        <Label Content="{Binding ElementName=colorPicker, Path=Green}" Grid.Row="1"/>
+        <Label Content="{Binding ElementName=colorPicker, Path=Blue}" Grid.Row="2"/>
+        <Slider Name="sliderRed" Minimum="0" Maximum="255"
+                Value="{Binding ElementName=colorPicker, Path=Red}" Background="{StaticResource Redslider}" Grid.Column="1" ToolTip="RED"/>
+        <Slider Name="sliderGreen" Minimum="0" Maximum="255" Grid.Row="1" Grid.Column="1"
+                Value="{Binding ElementName=colorPicker, Path=Green}" Background="{StaticResource Greenslider}" ToolTip="GREEN" />
+        <Slider Name="sliderBlue" Minimum="0" Maximum="255" Grid.Row="2"  Grid.Column="1"
+                Value="{Binding ElementName=colorPicker, Path=Blue}" Background="{StaticResource Blueslider}" ToolTip="BLUE"  />
+        <Rectangle Grid.Column="2" Grid.RowSpan="3" Width="80" Height="80" Stroke="Transparent" StrokeThickness="1"
+                   RadiusX="10" RadiusY="10">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="{Binding ElementName=colorPicker,Path=Color}"></SolidColorBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="{Binding ElementName=colorPicker,Path=Color}" Grid.Row="3" Grid.ColumnSpan="3"/>
+    </Grid>
+</UserControl>
