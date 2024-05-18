@@ -43,6 +43,10 @@
       <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -100,6 +104,9 @@
     </Compile>
     <Compile Include="Controls_Base_two.xaml.cs">
       <DependentUpon>Controls_Base_two.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase_w.xaml.cs">
+      <DependentUpon>DataBase_w.xaml</DependentUpon>
     </Compile>
     <Compile Include="DockPanel.xaml.cs">
       <DependentUpon>DockPanel.xaml</DependentUpon>
@@ -182,6 +189,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="dark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataBase_w.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -340,6 +351,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="fract.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dbo.pHONES.sql" />
+    <Content Include="dbo.sp_InsertPhone.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
