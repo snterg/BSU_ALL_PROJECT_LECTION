@@ -11,7 +11,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Frame Source="Page1.xaml" Grid.Row="0"/>
+        <Frame Source="Page1.xaml" Grid.Row="0" NavigationUIVisibility="Automatic"/>
         <TextBox Name="tb" Height="100" Grid.Row="1">Введите текст</TextBox>
         <!--<Button x:Name="btn3"  Height="100" VerticalAlignment="Bottom" Click="btn3_Click">
             <Button.Content>

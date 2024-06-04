@@ -35,14 +35,19 @@ namespace BSU_ALL_PROJECT_LECTION
     {
         public MainWindow()
         {
+           // SplashScreen splash = new SplashScreen("LAYOUT.png");
+           // splash.Show(true,false);
+           //// splash.Show(false, false);
+           // splash.Close(TimeSpan.FromSeconds(7));
+
             InitializeComponent();
-            Button nb = new Button();
-            nb.Content = "C# button";
-            nb.Click +=btn3_Click;
-            nb.Width = 100;
-            nb.Height = 100;
-            nb.VerticalAlignment = VerticalAlignment.Top;
-            grid.Children.Add(nb);
+            //Button nb = new Button();
+            //nb.Content = "C# button";
+            //nb.Click +=btn3_Click;
+            //nb.Width = 100;
+            //nb.Height = 100;
+            //nb.VerticalAlignment = VerticalAlignment.Top;
+            //grid.Children.Add(nb);
         }
 
         private void btn3_Click(object sender, RoutedEventArgs e)

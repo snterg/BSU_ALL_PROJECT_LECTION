@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:BSU_ALL_PROJECT_LECTION"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Page2">
+      Title="Page2" >
 
     <Window.Resources>
         <Style TargetType="TextBlock">
@@ -17,7 +17,10 @@
     <Grid Background="ForestGreen" >
         <StackPanel >
         <TextBlock x:Name="static_t" Text="Здесь будет текст из статического класса:"/>
-        <TextBlock x:Name="construct_t" Text="Здесь будет текст из конструктора с параметром:"/>
+            <TextBlock x:Name="construct_t" Text="Здесь будет текст из конструктора с параметром:"/>
+            <TextBox x:Name="input_1" FontSize="24" Text="{Binding Path=Data}"/>
+            <Button Content="OK" Click="Button_Click"/>
+            <Button Content="Cancel" Click="Button_Click_1"/>
         </StackPanel>
     </Grid>
 </Window>

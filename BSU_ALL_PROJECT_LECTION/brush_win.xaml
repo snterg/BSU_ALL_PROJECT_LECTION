@@ -42,7 +42,7 @@
 
         <Button Content="RadialGradientBrush" Grid.Column="2" Grid.Row="0">
             <Button.Background>
-                <RadialGradientBrush GradientOrigin="0.4,0.1">
+                <RadialGradientBrush GradientOrigin="0.5,0.5">
                     <GradientStop Color="DarkRed" Offset="1" />
                     <GradientStop Color="DarkGreen" Offset=".5" />
                     <GradientStop Color="BlueViolet" Offset="0" />

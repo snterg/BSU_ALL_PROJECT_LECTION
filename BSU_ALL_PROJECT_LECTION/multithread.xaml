@@ -14,11 +14,11 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
             <TextBlock x:Name="txt"/>
-            <Button Name="btnchange" Content="Изменить" Click="btnchange_Click"/>
+            <Button Name="btnchange" Content="без диспетчера" Click="btnchange_Click"/>
         </StackPanel>
         <StackPanel Grid.Column="1">
             <TextBlock x:Name="txt_1"/>
-            <Button Name="btnchange_1" Content="Изменить" Click="btnchange_Click"/>
+            <Button Name="btnchange_1" Content="есть диспетчер" Click="btnchange_Click"/>
         </StackPanel>
         <ScrollViewer Grid.Column="2">
             <StackPanel >

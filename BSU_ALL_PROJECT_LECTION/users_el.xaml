@@ -12,8 +12,8 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <StackPanel>
-            <local:simple_el_u />
-            <local:clr_picker_BSU  x:Name="clr_slider"/>
+            <local:simple_el_u Foreground="Aquamarine" />
+            <local:clr_picker_BSU  x:Name="clr_slider" ColorChanged="clr_ColorChanged"/>
         </StackPanel>
         <Button Content="Принять" Click="Button_Click" Grid.Column="1"/>
     </Grid>

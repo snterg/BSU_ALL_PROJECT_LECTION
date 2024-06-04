@@ -156,7 +156,7 @@ namespace BSU_ALL_PROJECT_LECTION
                 // Эмулирует некоторую работу посредством пятисекундной задержки
                 MessageBox.Show("MainProcess: " + System.Threading.Thread.CurrentThread.ManagedThreadId);
                 Thread.Sleep(TimeSpan.FromSeconds(5));
-                txt.Text = "Вставить новый текст";
+                txt.Text = DateTime.Now.ToString();
             }
             catch (Exception ex)
             {

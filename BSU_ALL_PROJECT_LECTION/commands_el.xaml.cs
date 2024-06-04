@@ -42,12 +42,24 @@ namespace BSU_ALL_PROJECT_LECTION
             commandBinding.Command = ApplicationCommands.Help;
             // устанавливаем метод, который будет выполняться при вызове команды
             commandBinding.Executed += CommandBinding_Executed;
+            commandBinding.CanExecute += CommandBinding_CanExecuted;
             // добавляем привязку к коллекции привязок элемента Button
             helpButton.CommandBindings.Add(commandBinding);
 
         }
 
         private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            save();
+        }
+
+        private void CommandBinding_CanExecuted(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute =DateTime.Now.Day % 2 == 0;
+                
+        }
+
+        void save()
         {
             MessageBox.Show("Справка по приложению");
         }
@@ -69,5 +81,14 @@ namespace BSU_ALL_PROJECT_LECTION
             this.Close();
         }
 
+        private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = txtBox.Text.Count() != 0;
+        }
+
+        private void CommandBinding_Executed_1(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("Команда выполняется");
+        }
     }
 }

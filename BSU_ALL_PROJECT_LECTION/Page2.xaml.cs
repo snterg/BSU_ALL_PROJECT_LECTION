@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static BSU_ALL_PROJECT_LECTION.modals_window;
 
 namespace BSU_ALL_PROJECT_LECTION
 {
@@ -29,8 +30,25 @@ namespace BSU_ALL_PROJECT_LECTION
 
         public Page2(string str):this()
         {
-
             construct_t.Text += " "+str;
+        }
+
+        public Page2(InputParams param) : this()
+        {
+            input_1.DataContext = param;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult = true;
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult = false;
+            this.Close();
+
         }
     }
 }

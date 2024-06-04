@@ -8,8 +8,9 @@
         Title="commands_el" Height="450" Width="800">
 
     <Window.CommandBindings>
-        <CommandBinding Command="Help" Executed="WindowBinding_Executed" />
+        <!--<CommandBinding Command="Help" Executed="WindowBinding_Executed" />-->
         <CommandBinding Command="local:WindowCommands.Exit" Executed="Exit_Executed"/>
+        <CommandBinding Command="Open" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed_1" />
     </Window.CommandBindings>
 
 
@@ -24,7 +25,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="helpButton" Command="ApplicationCommands.Help" Content="Help" Grid.Column="0" Grid.Row="0" />
+        <Button x:Name="helpButton" Command="Help" Content="Help" Grid.Column="0" Grid.Row="0" />
         <Button x:Name="helpButton_1" Command="Help" Content="Help"  Grid.Column="1" Grid.Row="0" >
             <Button.CommandBindings>
                 <CommandBinding Command="Help" Executed="CommandBinding_Executed" />
@@ -37,7 +38,7 @@
                 <MenuItem Header="File">
                     <MenuItem Header="Copy" CommandTarget="{Binding ElementName=txtBox}" Command="Copy"/>
                 <MenuItem Header="Paste" CommandTarget="{Binding ElementName=txtBox}" Command="Paste"/>
-                    <MenuItem Header="Exit"  Command="local:WindowCommands.Exit" />
+                    <MenuItem Header="Open"  Command="Open" />
                 </MenuItem>
         </Menu>
         <TextBox x:Name="txtBox" />

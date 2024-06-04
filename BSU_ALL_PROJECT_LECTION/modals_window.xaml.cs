@@ -12,17 +12,33 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static BSU_ALL_PROJECT_LECTION.modals_window;
 
 namespace BSU_ALL_PROJECT_LECTION
 {
     /// <summary>
     /// Логика взаимодействия для modals_window.xaml
     /// </summary>
+    /// 
+    public class InputParams
+    {
+        string data;
+
+        public string Data { get => data; set => data = value; }
+    }
+
     public partial class modals_window : Window
     {
+
+      
+
+        InputParams inputParams;
+
         public modals_window()
         {
             InitializeComponent();
+            inputParams = new InputParams();
+           
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -74,8 +90,16 @@ namespace BSU_ALL_PROJECT_LECTION
         {
             stat.txt = input.Text+" Static";
             string txt_1 = input.Text+" from new_window";
-            Page2 page = new Page2(txt_1);
-            page.Show();
+            Page2 page = new Page2();
+            //Page2 page = new Page2(txt_1);
+
+            inputParams.Data = txt_1;
+           // Page2 page = new Page2(inputParams);
+           // page.Show();
+            if(page.ShowDialog()==true)
+            {
+                MessageBox.Show(inputParams.Data);
+            }
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
@@ -94,5 +118,6 @@ namespace BSU_ALL_PROJECT_LECTION
                 MessageBox.Show("Ничего не выбрано");
             }
         }
+
     }
 }

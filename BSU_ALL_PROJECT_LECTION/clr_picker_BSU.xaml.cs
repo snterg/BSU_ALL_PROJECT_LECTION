@@ -101,6 +101,7 @@ namespace BSU_ALL_PROJECT_LECTION
                 color.B = (byte)e.NewValue;
 
             colorPicker.Color = color;
+            System.Windows.MessageBox.Show("Цвет изменился на " + e.NewValue);
         }
 
         private static void OnColorChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
