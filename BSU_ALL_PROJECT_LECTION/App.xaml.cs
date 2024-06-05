@@ -12,6 +12,19 @@ namespace BSU_ALL_PROJECT_LECTION
     /// <summary>
     /// Логика взаимодействия для App.xaml
     /// </summary>
+    /// 
+    public class BSU_PERSON
+    {
+        public int idNum { get; set; }
+
+        public string FIO { get; set; }
+
+        public override string ToString()
+        {
+            return $"BSU_PERSON, его поля\n:{this.idNum}, {FIO}";
+        }
+    }
+
     public partial class App : Application
     {
        public App()

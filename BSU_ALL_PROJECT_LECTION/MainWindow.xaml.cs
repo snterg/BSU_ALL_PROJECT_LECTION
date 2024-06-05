@@ -19,26 +19,17 @@ namespace BSU_ALL_PROJECT_LECTION
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     /// 
-    public class BSU_PERSON
-    {
-        public int idNum { get; set; }
-
-        public string FIO { get; set; }
-
-        //public override string ToString()
-        //{
-        //    return $"BSU_PERSON, его поля\n:{this.idNum}, {FIO}";
-        //}
-    }
+  
     public partial class MainWindow : Window
 
     {
         public MainWindow()
         {
-           // SplashScreen splash = new SplashScreen("LAYOUT.png");
-           // splash.Show(true,false);
-           //// splash.Show(false, false);
-           // splash.Close(TimeSpan.FromSeconds(7));
+            SplashScreen splash = new SplashScreen("LAYOUT.png");
+            //splash.Show(false);
+            // splash.Show(true, false);
+            splash.Show(false, true);
+            splash.Close(TimeSpan.FromSeconds(7));
 
             InitializeComponent();
             //Button nb = new Button();

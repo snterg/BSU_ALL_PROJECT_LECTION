@@ -16,14 +16,12 @@ using System.Windows.Shapes;
 namespace BSU_ALL_PROJECT_LECTION
 {
     /// <summary>
-    /// Логика взаимодействия для WrapPanel.xaml
+    /// Логика взаимодействия для Page3.xaml
     /// </summary>
-    public partial class WrapPanel : Page
+    public partial class Page3 : Page
     {
-        public WrapPanel()
+        public Page3()
         {
-            SplashScreen splash = new SplashScreen("LAYOUT.png");
-            splash.Show(true, false);
             InitializeComponent();
         }
     }

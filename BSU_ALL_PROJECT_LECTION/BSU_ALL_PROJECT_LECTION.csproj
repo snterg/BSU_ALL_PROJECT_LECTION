@@ -38,6 +38,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>6997779.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -140,6 +143,9 @@
       <DependentUpon>not_stand_window_3.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page2.xaml.cs" />
+    <Compile Include="Page3.xaml.cs">
+      <DependentUpon>Page3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Resources.xaml.cs">
       <DependentUpon>Resources.xaml</DependentUpon>
     </Compile>
@@ -273,6 +279,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Page3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -363,6 +373,7 @@
     <Resource Include="fract.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="6997779.ico" />
     <Content Include="dbo.pHONES.sql" />
     <Content Include="dbo.sp_InsertPhone.sql" />
   </ItemGroup>

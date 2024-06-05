@@ -22,6 +22,7 @@ namespace BSU_ALL_PROJECT_LECTION
     {
         public Page1()
         {
+          
             InitializeComponent();
         }
     }
